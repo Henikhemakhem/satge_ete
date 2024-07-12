@@ -1,0 +1,245 @@
+
+
+.video-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.video-list {
+  list-style: none; /* Supprime les puces par défaut */
+  padding: 0;
+  counter-reset: video-counter; /* Initialisation du compteur */
+}
+
+.video-item {
+  counter-increment: video-counter; /* Incrémente le compteur */
+  padding: 15px;
+  margin-right: 20px; /* Ajoute de l'espace entre les vidéos */
+  background-color: white;
+  border: 2px solid #007BFF; /* Couleur de la bordure */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.video-item::before {
+  content: counter(video-counter) ". "; /* Ajoute le numéro */
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background-color: #007BFF; /* Couleur de fond pour le numéro */
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 320px; /* Largeur maximale de la vidéo */
+  margin: 0 auto;
+}
+
+
+
+.course-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .course-item h3 {
+    margin-bottom: 10px;
+  }
+  
+  .course-item p {
+    margin-bottom: 10px;
+  }
+  
+  .course-actions {
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    margin-right: 5px;
+  }
+  
+  .pdf-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+  
+  .videos-section, .pdf-section {
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+  
+  .pdf-preview {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  .formation-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 16px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .formation-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .formation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .formation-header h2 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin: 0;
+  }
+  
+  .formation-header .category {
+    font-size: 0.9em;
+    color: #95a5a6;
+    margin: 0;
+  }
+  
+  .description {
+    font-size: 1em;
+    color: #7f8c8d;
+    margin: 10px 0;
+  }
+  
+  .formation-details {
+    font-size: 0.9em;
+    color: #bdc3c7;
+    margin: 10px 0;
+  }
+  
+  .formation-details p {
+    margin: 5px 0;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn img.pdf-icon {
+    margin-right: 8px; /* Espacement entre l'icône et le texte */
+    width: 20px;       /* Largeur de l'icône */
+    height: auto;      /* Maintien des proportions de l'icône */
+  }
+  
+  /* Style pour le bouton principal */
+  .btn-primary1 {
+    background-color: #D32F2F; /* Rouge vif */
+    color: white;              /* Couleur du texte */
+  }
+  
+  .btn-primary1:hover {
+    background-color: #B71C1C; /* Rouge plus foncé au survol */
+    transform: scale(1.05);    /* Léger agrandissement au survol */
+  }
+  
+  .btn-primary1:active {
+    background-color: #880E4F; /* Rouge encore plus foncé au clic */
+    transform: scale(0.95);    /* Léger rétrécissement au clic */
+  }
+  
+  /* Style pour le bouton secondaire */
+  .btn-secondary1 {
+    background-color: #5f666c; /* Bleu vif */
+    color: white;              /* Couleur du texte */
+  }
+  
+  .btn-secondary1:hover {
+    background-color: #1565C0; /* Bleu plus foncé au survol */
+    transform: scale(1.05);    /* Léger agrandissement au survol */
+  }
+  
+  .btn-secondary1:active {
+    background-color: #0D47A1; /* Bleu encore plus foncé au clic */
+    transform: scale(0.95);    /* Léger rétrécissement au clic */
+  }
+  
+  /* Facultatif : Ajouter des ombres pour plus de profondeur */
+  .btn-primary1, .btn-secondary1 {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-primary1:focus, .btn-secondary1:focus {
+    outline: none;             /* Supprime la bordure par défaut au focus */
+    box-shadow: 0 0 0 3px rgba(255, 82, 82, 0.5); /* Bordure de focus rouge */
+  }
+  
+  .btn-primary {
+    background: #007bff;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background: #0056b3;
+  }
+  
+  .video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ajustez selon vos besoins */
+  }
+  
+  .video-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .video-item {
+    width: calc(33.33% - 20px); /* Ajustez la largeur pour avoir trois vidéos par ligne */
+    margin-bottom: 20px;
+  }
+  
+  .video-wrapper {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio pour maintenir le format de la vidéo (16:9) */
+    overflow: hidden;
+    background: #000;
+  }
+  
+  .video-wrapper iframe,
+  .video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  

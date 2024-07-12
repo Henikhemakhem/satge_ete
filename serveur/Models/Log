@@ -1,0 +1,21 @@
+const mongoose = require('mongoose');
+
+const LogSchema = new mongoose.Schema({
+  email: {
+    type: String,
+    required: true
+  },
+  action: {
+    type: String,
+    required: true
+  },
+  title: {
+    type: String  // Ajout du champ titre pour enregistrer le titre de la formation
+  },
+  timestamp: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+module.exports = mongoose.model('Log', LogSchema);

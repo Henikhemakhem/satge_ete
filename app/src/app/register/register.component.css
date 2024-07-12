@@ -1,0 +1,34 @@
+/* login.component.css and register.component.css */
+body {
+    background: #f8f9fa;
+  }
+  
+  .card {
+    border: 1px solid #e3e6f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 2rem;
+  }
+  
+  .card-title {
+    margin-bottom: 2rem;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .btn-primary {
+    background-color: #4e73df;
+    border-color: #4e73df;
+  }
+  
+  .btn-block {
+    display: block;
+    width: 100%;
+  }
+  

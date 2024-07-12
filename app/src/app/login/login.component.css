@@ -1,0 +1,77 @@
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+  }
+  
+  .site-section-cover {
+    padding: 100px 0;
+  }
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  .card-body {
+    padding: 2rem;
+  }
+  
+  h2 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .btn-custom {
+    border: none;
+    color: #007bff;
+    padding: 10px 20px;
+    font-size: 16px;
+   
+  }
+  
+  
+  .btn-google {
+    background-color: #db4437;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-google i {
+    margin-right: 8px;
+  }
+  
+  .btn-google:hover {
+    background-color: #c23321;
+  }
+  
+  .btn-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .btn-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  .alert {
+    margin-top: 1rem;
+  }
+  
+  .container {
+    margin-top: 3rem;
+  }

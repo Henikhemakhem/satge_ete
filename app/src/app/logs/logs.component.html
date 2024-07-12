@@ -1,0 +1,52 @@
+<app-layout-admin></app-layout-admin>
+<br><br>
+<div class="body">
+    <div class="logs-container">
+      <h2>Logs</h2>
+      <form class="d-flex search-form" (ngSubmit)="search()">
+        <input type="search" class="form-control mr-2" placeholder="Search by title or courses" [(ngModel)]="searchTerm" name="searchTerm">
+        <button type="submit" class="btn btn-primary px-4">Search</button>
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Action</th>
+            <th>Titre de Formation ou Courses</th>
+            <th>Timestamp</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let log of filteredLogs">
+            <td>{{ log.email }}</td>
+            <td>{{ log.action }}</td>
+            <td>{{ log.title }}</td>
+            <td>{{ log.timestamp | date:'short' }}</td>
+          </tr>
+          <!-- Add a message for no logs -->
+          <tr *ngIf="filteredLogs.length === 0">
+            <td colspan="4" class="message">No logs available.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <app-footer-admin></app-footer-admin>
+  <style>
+
+.body{
+  display: flex;
+  position: relative;
+}
+
+table, th,td {
+    border: 1px solid black;
+    border-collapse: collapse; /* Ensures borders are not doubled */
+}
+
+    .logs-container{
+      margin-top: 0;
+  max-height: none;
+  margin-top: -700px;
+    }
+  </style>
