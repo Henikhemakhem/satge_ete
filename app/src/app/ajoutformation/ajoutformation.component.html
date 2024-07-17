@@ -37,11 +37,15 @@
             <label for="level">Level:</label>
             <input type="text" id="level" formControlName="level" class="form-control" required>
           </div>
+          <div class="form-group">
+            <label for="prix">prix:</label>
+            <input type="text" id="prix" formControlName="prix" class="form-control" required>
+          </div>
           <div class="form-group" *ngIf="!idcourant">
             <label for="image">Image:</label>
             <input type="file" id="image" (change)="onFileSelected($event)" formControlName="image" class="form-control-file" required>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">Create </button>
         </form>
       </div>
     </div>

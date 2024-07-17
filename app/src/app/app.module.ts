@@ -33,6 +33,7 @@ import { Ajoutformation1Component } from './ajoutformation1/ajoutformation1.comp
 import { LogsComponent } from './logs/logs.component';
 import { Formcours1Component } from './formcours1/formcours1.component';
 import { Courseadmin1Component } from './courseadmin1/courseadmin1.component';
+import { PayementComponent } from './payement/payement.component';
 
 
 
@@ -61,10 +62,12 @@ import { Courseadmin1Component } from './courseadmin1/courseadmin1.component';
     LogsComponent,
     Formcours1Component,
     Courseadmin1Component,
+    PayementComponent,
 
 
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,

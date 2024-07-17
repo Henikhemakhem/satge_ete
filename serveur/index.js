@@ -34,10 +34,10 @@ const upload = multer({ storage: storage });
 
 // Route pour créer une nouvelle formation avec upload d'image
 app.post("/createformation", upload.single('image'), (req, res) => {
-    const { title, description, category, duration, level } = req.body;
+    const { title, description, category, duration, level ,prix} = req.body;
   
     // Check if required fields are missing
-    if (!title || !description || !category || !duration || !level || !req.file) {
+    if (!title || !description || !category || !duration || !level || !prix ||!req.file) {
       return res.status(400).json({ message: "Missing required fields or image file" });
     }
   
@@ -48,7 +48,8 @@ app.post("/createformation", upload.single('image'), (req, res) => {
       category,
       duration,
       level,
-      image: req.file.path, // Assuming req.file.path is correct
+      image: req.file.path,
+      prix, // Assuming req.file.path is correct
     });
   
     // Save the new Formation instance

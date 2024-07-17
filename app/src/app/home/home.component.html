@@ -172,7 +172,9 @@
                     <span class="formation-duration"><i class="icon-clock"></i>duration: {{ formation.duration }}</span>
                     <span class="formation-level">level:{{ formation.level }}</span>
                     <span class="formation-date">date:{{ formation.date | date }}</span>
+                    
                   </div>
+                  <span class="formation-level">prix:{{ formation.prix }}</span>
                   <a class="btn btn-primary" [routerLink]="['/formation', formation._id,'view']">
                     <i class="fas fa-eye"></i> View courses
                   </a>

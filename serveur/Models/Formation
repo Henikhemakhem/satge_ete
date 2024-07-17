@@ -7,7 +7,8 @@ const FormationSchema = new mongoose.Schema({
     category: { type: String, required: true },
     duration: { type: String, required: true },
     level: { type: String, required: true },
-    date: { type: Date, default: Date.now }
+    date: { type: Date, default: Date.now },
+    prix: { type: String, required: true },
 });
 
 module.exports = mongoose.model('Formation', FormationSchema);

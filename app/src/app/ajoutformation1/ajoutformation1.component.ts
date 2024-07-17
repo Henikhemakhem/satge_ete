@@ -50,6 +50,7 @@ export class Ajoutformation1Component implements OnInit {
         category: [formation.category, Validators.required],
         duration: [formation.duration, Validators.required],
         level: [formation.level, Validators.required],
+        prix: ['', Validators.required],
       });
     } else {
       this.form = this.fb.group({
@@ -58,7 +59,9 @@ export class Ajoutformation1Component implements OnInit {
         category: ['', Validators.required],
         duration: ['', Validators.required],
         level: ['', Validators.required],
-        image: [null, Validators.required]
+        prix: ['', Validators.required],
+        image: [null, Validators.required],
+      
       });
     }
   }
@@ -94,6 +97,7 @@ export class Ajoutformation1Component implements OnInit {
         formData.append('category', this.form.get('category')?.value);
         formData.append('duration', this.form.get('duration')?.value);
         formData.append('level', this.form.get('level')?.value);
+        formData.append('prix', this.form.get('prix')?.value);
         if (this.selectedFile) {
           formData.append('image', this.selectedFile);
         }
