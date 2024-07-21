@@ -10,6 +10,7 @@ const User = require('./Models/User');
 const Course = require('./Models/Course'); // Importer le modèle Course
 const Admin = require('./Models/Admin'); // Importer le modèle Course
 const Log = require('./Models/Log');
+const Abonnement = require('./Models/Abonnement'); 
 mongoose.connect("mongodb://127.0.0.1:27017/stage");
 
 const app = express();
@@ -31,6 +32,28 @@ const storage = new CloudinaryStorage({
 });
 
 const upload = multer({ storage: storage });
+
+//abonnementy
+app.get('/abos', (req, res) => {
+  Abonnement.find()
+    .then(abonnements => res.status(200).json(abonnements))
+    .catch(err => res.status(400).json({ error: 'Unable to fetch abonnements', details: err }));
+});
+
+
+app.post('/abonnements', (req, res) => {
+  const { formation, IdUser, stripeToken } = req.body;
+
+  const newAbonnement = new Abonnement({
+    formation,
+    IdUser,
+    stripeToken // Stocker l'objet stripeToken complet
+  });
+
+  newAbonnement.save()
+    .then(abonnement => res.status(201).json(abonnement))
+    .catch(err => res.status(400).json({ error: 'Unable to create abonnement', details: err }));
+});
 
 // Route pour créer une nouvelle formation avec upload d'image
 app.post("/createformation", upload.single('image'), (req, res) => {

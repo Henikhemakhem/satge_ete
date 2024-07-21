@@ -1,0 +1,27 @@
+.abonnement-container {
+    width: 85%;
+    margin: 0 auto;
+  }
+  
+  .table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .stripe-details {
+    max-height: 50px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .stripe-details:hover {
+    max-height: 500px;
+  }
+  

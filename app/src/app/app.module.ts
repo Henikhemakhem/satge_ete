@@ -34,6 +34,7 @@ import { LogsComponent } from './logs/logs.component';
 import { Formcours1Component } from './formcours1/formcours1.component';
 import { Courseadmin1Component } from './courseadmin1/courseadmin1.component';
 import { PayementComponent } from './payement/payement.component';
+import { AbonnementComponent } from './abonnement/abonnement.component';
 
 
 
@@ -63,6 +64,7 @@ import { PayementComponent } from './payement/payement.component';
     Formcours1Component,
     Courseadmin1Component,
     PayementComponent,
+    AbonnementComponent,
 
 
   ],

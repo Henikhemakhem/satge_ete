@@ -18,6 +18,10 @@
         <form [formGroup]="form" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
           <!-- Formulaire -->
           <div class="form-group">
+  
+            <input type="text" id="id" formControlName="id" class="form-control" hidden>
+          </div>
+          <div class="form-group">
             <label for="title">Title:</label>
             <input type="text" id="title" formControlName="title" class="form-control" required>
           </div>

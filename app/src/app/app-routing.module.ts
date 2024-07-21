@@ -20,6 +20,7 @@ import { Ajoutformation1Component } from './ajoutformation1/ajoutformation1.comp
 import { LogsComponent } from './logs/logs.component';
 import { Formcours1Component } from './formcours1/formcours1.component';
 import { Courseadmin1Component } from './courseadmin1/courseadmin1.component';
+import { AbonnementComponent } from './abonnement/abonnement.component';
 
 
 const routes: Routes = [
@@ -116,6 +117,11 @@ const routes: Routes = [
     
     path: 'layout',
     component: LayoutAdminComponent
+  },
+  {
+    
+    path: 'abonnements',
+    component: AbonnementComponent
   },
   {
     

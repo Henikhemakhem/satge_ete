@@ -242,4 +242,86 @@
     width: 100%;
     height: 100%;
   }
-  
+  /* tutorial.component.css */
+.payment-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.payment-container p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.pay-button {
+  background-color: #4CAF50; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 15px 32px; /* Some padding */
+  text-align: center; /* Center the text (if you want to align the text) */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Get the element to line up correctly */
+  font-size: 16px; /* Increase font size */
+  margin: 4px 2px; /* Add some margin */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Animation for hover effect */
+}
+
+.pay-button:hover {
+  background-color: #45a049; /* Darker green background on hover */
+}
+
+.payment-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+}
+
+.payment-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.payment-container p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+#stripe-script {
+  background-color: #6772e5;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+#stripe-script:hover {
+  background-color: #5469d4;
+}
+
+#stripe-script:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#stripe-script:active {
+  background-color: #4555b5;
+}
+
+.payment-container .stripe-feedback {
+  margin-top: 20px;
+  font-size: 16px;
+  color: green;
+}

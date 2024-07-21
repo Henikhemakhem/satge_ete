@@ -1,0 +1,58 @@
+<app-layout-admin></app-layout-admin>
+<div class="body">
+ 
+    <div class="main-content">
+      <div class="container">
+<div class="abonnement-container">
+    <h1>Subscription List</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Course</th>
+                <th>price</th>
+          
+                <th>Stripe Details</th>
+            </tr>
+        </thead>
+      <tbody>
+        <tr *ngFor="let abo of abonnements">
+          <td>{{ abo.IdUser }}</td>
+          <td>{{ getFormationTitle(abo.formation) }}</td>
+          <!-- <td>{{ abo.date | date }}</td> -->
+          <td>{{ getFormationPrice(abo.formation) }}</td>
+          <td>
+            <div class="stripe-details">
+              <pre>{{ abo.stripeToken | json }}</pre>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>  </div>  </div>
+
+  <style>
+
+.body{
+  display: flex;
+  position: relative;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.container {
+  margin-top: 0;
+  max-height: none;
+  margin-top: -700px;
+}
+  </style>

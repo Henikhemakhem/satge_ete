@@ -31,9 +31,14 @@
  </form>
  <br><br><br>
              </div>
+
+
+          <!-- 2 seulement -->
+             <div *ngIf="close==false">
           <div *ngIf="courses.length > 0">
             <ul class="list-unstyled tutorial-section-list">
-              <li *ngFor="let course of filteredcourse" class="course-item">
+
+                <li *ngFor="let course of filteredcourse.slice(0, 2)" class="course-item">
                 <h3>{{ course.nom }}</h3>
                 <p>{{ course.explication }}</p>
                 <div class="course-actions">
@@ -78,6 +83,73 @@
               </li>
             </ul>
           </div>
+         <!-- tutorial.component.html -->
+<div class="payment-container">
+  <p>If you want to complete our course {{titleform}}, please make a payment of {{prix}}.</p>
+  <button class="pay-button" (click)="makePayment()">Pay {{prix}} </button>
+</div>
+
+             </div>
+<!--  -->
+
+
+      <!-- tout -->
+      <div *ngIf="close==true">
+        <div *ngIf="courses.length > 0">
+          <ul class="list-unstyled tutorial-section-list">
+
+              <li *ngFor="let course of filteredcourse" class="course-item">
+              <h3>{{ course.nom }}</h3>
+              <p>{{ course.explication }}</p>
+              <div class="course-actions">
+          
+    
+                <button class="btn btn-primary1" *ngIf="!course.showVideos" (click)="showVideos(course)">Play Videos</button>
+                <button class="btn btn-secondary1" *ngIf="course.showVideos" (click)="hideVideos(course)">Hide Videos</button>
+                
+                <button class="btn btn-primary1" *ngIf="!course.showpdf" (click)="showpdf(course)">
+                  Show Course
+                </button>
+                <button class="btn btn-secondary1" *ngIf="course.showpdf" (click)="hidepdf(course)">
+            Hide Course
+                </button>
+              </div>
+    
+              <div *ngIf="course.showVideos" class="video-container">
+                <ul class="list-unstyled video-list">
+                  <li *ngFor="let video of course.videos" class="video-item">
+                    <div *ngIf="!isYouTubeVideo(video)" class="video-wrapper">
+                      <video width="320" height="240" controls>
+                        <source [src]="video.safeUrl || video.url" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <div *ngIf="isYouTubeVideo(video)" class="video-wrapper">
+                      <iframe width="320" height="240"
+                              [src]="getYouTubeEmbedUrl(video.url)"
+                              frameborder="0" allowfullscreen>
+                      </iframe>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+    
+              <div *ngIf="course.showpdf" class="pdf-section">
+                <a [href]="course.pdf" target="_blank" *ngIf="course.pdf">
+                  <img src="assets/images/pdf-icon.png" alt="PDF Icon" class="pdf-preview">
+                  View PDF
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+     
+           </div>
+<!--  -->
+
+
+
+
           <div class="site-section bg-light">
             <div class="container">
               <div class="row">
